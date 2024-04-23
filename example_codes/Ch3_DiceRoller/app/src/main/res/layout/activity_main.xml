@@ -2,17 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     android:background="@color/white"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
         android:text="Dice Roller"
         android:textSize="50sp"
         android:layout_gravity="center"
@@ -20,23 +19,25 @@
 
     <ImageView
         android:id="@+id/imageView"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dice1"
+        />
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="70dp"
-        android:maxHeight="200dp"
-        android:maxWidth="200dp"
-        android:adjustViewBounds="true"
-        android:src="@drawable/Dice"
+        android:text=""
+        android:textSize="30sp"
         />
-
     <Button
         android:id="@+id/rollButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:text="ROLL"
+        android:onClick="rollClicked"
         />
 
 </LinearLayout>
