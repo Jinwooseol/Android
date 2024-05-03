@@ -30,20 +30,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        colorButton1.setOnClickListener(view -> changeClothingColor(Color.RED));
+
         colorButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 changeClothingColor(Color.BLUE);
             }
         });
-
         colorButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 changeClothingColor(Color.GREEN);
             }
         });
-
         colorButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     private void changeClothingColor(int color) {
         clothingImageView.setBackgroundColor(color);
     }
