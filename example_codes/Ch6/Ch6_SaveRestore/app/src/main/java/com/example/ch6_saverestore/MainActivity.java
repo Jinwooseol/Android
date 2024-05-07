@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     Button button1, button2;
     TextView text;
     int count = 0;
+    Bundle savedThirdInstanceState = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +42,28 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i("LifeCycle", "onSaveInstanceState()");
+        outState.putInt("count", count);
+        if (count == 3) {
+            outState.putInt("count", count * 100);
+            savedThirdInstanceState = outState;
+        } else {
+            outState.putInt("count", count);
+        }
+    }
+    @Override
+    public void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        if (savedThirdInstanceState != null) {
+            super.onRestoreInstanceState(savedThirdInstanceState);
+        } else {
+            super.onRestoreInstanceState(savedInstanceState);
+        }
+        Log.i("LifeCycle", "onRestoreInstanceState()");
+        int count = savedInstanceState.getInt("count");
+    }
+    @Override
     public void onStart() {
         super.onStart();
         Log.i("LifeCycle", "onStart()");
@@ -49,19 +72,6 @@ public class MainActivity extends AppCompatActivity {
     public void onResume() {
         super.onResume();
         Log.i("LifeCycle", "onResume()");
-    }
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        Log.i("LifeCycle", "onSaveInstanceState()");
-        outState.putInt("count", count);
-    }
-    @Override
-    public void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        Log.i("LifeCycle", "onRestoreInstanceState()");
-        int count = savedInstanceState.getInt("count");
-        Log.i("LifeCycle", "Count : " + count);
     }
     @Override
     public void onPause() {
