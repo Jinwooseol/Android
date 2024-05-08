@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         } else if (view.getId() == R.id.Act1ToAct2Button) {
             Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
             startActivity(intent);
         } else if (view.getId() == R.id.Act1ToAct3Button) {
             Intent intent = new Intent(MainActivity.this, ThirdActivity.class);

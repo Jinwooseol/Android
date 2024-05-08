@@ -15,8 +15,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:launchMode="singleInstancePerTask"
-            android:taskAffinity="com.example.launchmode.A">
+            android:launchMode="standard"
+            android:taskAffinity="com.example.launchmode_standard.A">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,13 +25,13 @@
         </activity>
         <activity
             android:name=".SecondActivity"
-            android:launchMode="standard"
-            android:taskAffinity="com.example.launchmode.B">
+            android:launchMode="singleInstancePerTask"
+            android:taskAffinity="com.example.launchmode_standard.B">
         </activity>
         <activity
             android:name=".ThirdActivity"
             android:launchMode="standard"
-            android:taskAffinity="com.example.launchmode.C">
+            android:taskAffinity="com.example.launchmode_standard.C">
         </activity>
     </application>
 
