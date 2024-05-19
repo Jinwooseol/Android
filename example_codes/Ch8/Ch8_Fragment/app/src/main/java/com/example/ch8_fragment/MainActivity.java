@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,12 +16,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void setFrag1(View view) {
+        Log.i("MainActivity", "setFragment1");
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction ft = manager.beginTransaction();
         ft.replace(R.id.frame_container, new Fragment1(), "one");
         ft.commitAllowingStateLoss();
     }
     public void setFrag2(View view) {
+        Log.i("MainActivity", "setFragment2");
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction ft = manager.beginTransaction();
         ft.replace(R.id.frame_container, new Fragment2(), "two");
