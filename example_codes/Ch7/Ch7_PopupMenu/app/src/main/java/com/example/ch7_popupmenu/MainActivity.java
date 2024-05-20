@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View button) {
         PopupMenu popup = new PopupMenu(this, button);
         popup.getMenuInflater().inflate(R.menu.popup, popup.getMenu());
+        popup.setForceShowIcon(true);
         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                                              @Override
                                              public boolean onMenuItemClick(MenuItem item) {
