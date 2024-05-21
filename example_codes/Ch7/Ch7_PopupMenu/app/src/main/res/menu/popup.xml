@@ -12,15 +12,6 @@
         android:id="@+id/edit"
         android:icon="@android:drawable/ic_menu_edit"
         android:title="edit">
-        <menu>
-            <item
-                android:id="@+id/share"
-                android:icon="@android:drawable/ic_menu_share"
-                android:title="share"/>
-            <item
-                android:id="@+id/edit_new"
-                android:icon="@android:drawable/ic_menu_edit"
-                android:title="edit_new"/>
-        </menu>
+
     </item>
 </menu>
