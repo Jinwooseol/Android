@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void showPopupMenu() {
         PopupMenu popup = new PopupMenu(this, anchorButton);
-        popup.setForceShowIcon(true);
         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                                              @Override
                                              public boolean onMenuItemClick(MenuItem item) {
@@ -46,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             isSubMenu = true;
             showPopupMenu();
             return true;
-        } else if (item.getItemId() == R.id.edit_new) {
+        } else if (item.getItemId() == R.id.back) {
             isSubMenu = false;
             showPopupMenu();
             return true;
