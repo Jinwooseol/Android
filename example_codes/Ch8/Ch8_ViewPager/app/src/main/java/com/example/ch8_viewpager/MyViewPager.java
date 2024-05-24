@@ -2,6 +2,7 @@ package com.example.ch8_viewpager;
 
 import android.content.Context;
 import android.media.Image;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,7 @@ public class MyViewPager extends PagerAdapter {
     }
     @Override
     public boolean isViewFromObject(@NonNull View view,@NonNull Object object) {
+        Log.i("MyViewPager", "isViewFromObject");
         return view == ((LinearLayout) object);
     }
     @Override

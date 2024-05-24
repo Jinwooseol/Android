@@ -6,15 +6,18 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 public class CustomView extends View {
     public CustomView(Context context) {
         super(context);
+        Log.i("CustomView", "CustomView(Context)");
         setBackgroundColor(Color.BLUE);
     }
     public CustomView(Context context, AttributeSet attrs) {
         super(context);
+        Log.i("CustomView", "CustomView(Context, AttributeSet)");
         setBackgroundColor(Color.BLUE);
     }
     @Override
