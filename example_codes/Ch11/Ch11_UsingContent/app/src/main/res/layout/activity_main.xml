@@ -32,6 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#009688"
+            android:onClick="displaySecondImage"
             android:text="next"/>
     </LinearLayout>
     <ImageView
