@@ -1,6 +1,6 @@
 package com.example.ch9_cloneable;
 
-import android.location.Address;
+import com.example.ch9_cloneable.Address;
 
 public class Person implements Cloneable {
     private String name;
@@ -13,7 +13,6 @@ public class Person implements Cloneable {
         this.age = age;
         this.address = address;
     }
-
     // Getter
     public String getName() {
         return name;
@@ -38,16 +37,13 @@ public class Person implements Cloneable {
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return super.clone();   // shallow copy
-    }
-    protected Person deepClone() throws CloneNotSupportedException {
         Person cloned = (Person) super.clone();
         cloned.address = (Address) address.clone();
         return cloned;
     }
     @Override
     public String toString() {
-        return "Person{name='" + name + "', age=" + age + '}';
+        return "Person{name='" + name + "', age=" + age + ", address=" + address + '}';
     }
 }
 

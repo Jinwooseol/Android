@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         imageView = findViewById(R.id.picture);
         ActivityCompat.requestPermissions(this,
-                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);
+                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
     }
     public void displayFirstImage(View v) {
         Toast.makeText(getApplicationContext(), "displayFirstImage()", Toast.LENGTH_LONG).show();

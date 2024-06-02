@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Ch9_Cloneable"
 include(":app")
+include(":app")
  

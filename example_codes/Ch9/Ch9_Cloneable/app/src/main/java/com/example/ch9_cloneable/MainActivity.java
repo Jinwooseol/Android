@@ -14,26 +14,24 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
         Address original_address = new Address("Busan", "Dongrae");
         Person original_person = new Person("Felix", 26, original_address);
         try {
             Person clone_person = (Person) original_person.clone();
+            //Person clone_person = original_person;
 
             Log.d("CloneableExample", "Original: " + original_person.toString());
             Log.d("CloneableExample", "Clone: " + clone_person.toString());
 
-
+            clone_person.setName("Bob");
+            clone_person.setAge(30);
+            clone_person.setAddress(new Address("Seoul", "Gangnam"));
 
             Log.d("CloneableExample", "Original: " + original_person.toString());
             Log.d("CloneableExample", "Clone: " + clone_person.toString());
-        } catch (CloneNotSupportedException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
