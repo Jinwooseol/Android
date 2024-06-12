@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ch15_MarkerDemo"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBG443hxOVLxBe6Uqhd64lnWpaBuQoeNFY"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
